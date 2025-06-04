@@ -38,8 +38,8 @@ Software:
 
 Please refer to the sample file. For details, please refer to the "example" directory
 ```
-genome=$Your_PATH/example/genome.fa  #must be `.fasta` or `.fa` ,cannot be compressed
-asm=$Your_PATH/example/ont_read.fa  #can be hifi/ont reads and other assembly;must be `.fasta` or `.fa` ,cannot be compressed
+genome=$Your_PATH/example/genome.fa  #must be .fasta or .fa ,cannot be compressed
+asm=$Your_PATH/example/ont_read.fa  #can be hifi/ont reads and other assembly;must be .fasta or .fa,cannot be compressed
 telomere_monomer=CCCTAA  #The telomere monomer should be the positive monomer of the head chromosome (5')
 sp=test  #species name
 #map-hifi for hifi reads;map-ont for ont reads;asm5 for contigs
