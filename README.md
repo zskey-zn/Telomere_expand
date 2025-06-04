@@ -5,7 +5,19 @@ telomere expand pipeline
 This software is used for expand telomere.
 
 ## Overview
-![workflow](images/AlleleFinderWorkflow.png)
+### Telomere Expansion Workflow
+
+```mermaid
+flowchart TD
+    A[Extract ≥4 monomer] 
+    --> B[VGP filter]
+    --> C{Telomere-lacking chr?}
+    C -->|Yes| D[Align to chr ends]
+    C -->|No| X([End])
+    D --> E[Select best alignment]
+    E --> F[Expand chr]
+    F --> G([Complete])
+```
 
 
 ## Dependencies
