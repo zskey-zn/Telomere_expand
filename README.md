@@ -12,7 +12,7 @@ This software is used for expand telomere.
 
 Software:
 
-- [seqkit]([https://github.com/wyp1125/MCScanX](https://bioinf.shenwei.me/seqkit/)
+- [seqkit](https://bioinf.shenwei.me/seqkit/)
 - [TGS-GapCloser](https://github.com/BGI-Qingdao/TGS-GapCloser)
 - [minimap2](https://github.com/lh3/minimap2)
 - [vgp-assembly](https://github.com/VGP/vgp-assembly)
