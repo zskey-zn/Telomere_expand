@@ -1,0 +1,7 @@
+genome=$Your_PATH/example/genome.fa
+asm=$Your_PATH/example/ont_read.fa
+#端粒单体要是头部(5')的正向单体
+telomere_monomer=CCCTAA
+sp=test
+#map-hifi for hifi reads;map-ont for ont reads;asm5 for contigs
+map_para=map-ont
