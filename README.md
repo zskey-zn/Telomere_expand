@@ -45,6 +45,7 @@ sp=test  #species name
 #map-hifi for hifi reads;map-ont for ont reads;asm5 for contigs
 map_para=map-ont  
 ```
+> **Notice:** Bases must be in uppercase.
 
 ### 2. Process script generation and execution
 
