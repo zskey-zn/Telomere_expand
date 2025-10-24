@@ -42,8 +42,9 @@ $seqkit seq all.asm.fa -w 10000 | grep -A 2 ">" | grep -i {3}{3}{3}{3}""".format
 $seqkit seq all.asm.fa -r -p -w 10000 | grep -A 2 ">" | grep -i {0}{0}{0}{0}""".format(data_dict['telomere_monomer'])+""" -B 1 |grep ">" | sed 's/>//g' |awk '{print $1}' > tail_trans.id
 $seqkit grep -f head_cis.id all.asm.fa   | $seqkit seq -w 0 | sed 's/>/>cis_/g'>candidate_contig.fa &&
 $seqkit grep -f tail_trans.id all.asm.fa | $seqkit seq -r -p -w 0 | sed 's/>/>trans_/g'>> candidate_contig.fa &&
+$seqkit seq -w0 candidate_contig.fa  |awk '{print $1}' | ${seqkit} seq > candidate_contig.fa.tmp &&
+mv candidate_contig.fa.tmp candidate_contig.fa &&
 $seqkit faidx candidate_contig.fa &&
-
 echo end at `date` &&
 touch 00.gapcloser_merge.sh.finish
 """
