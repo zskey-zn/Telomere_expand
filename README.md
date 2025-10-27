@@ -27,7 +27,7 @@ Software:
 - [seqkit](https://bioinf.shenwei.me/seqkit/)
 - [TGS-GapCloser](https://github.com/BGI-Qingdao/TGS-GapCloser)
 - [minimap2](https://github.com/lh3/minimap2)
-- [vgp-assembly (telomere module)](https://github.com/VGP/vgp-assembly/tree/master/pipeline/telomere)
+- [vgp-assembly (telomere module)](https://github.com/zskey-zn/vgp-assembly/tree/master/pipeline/telomere)
 - [sdust](https://github.com/lh3/sdust)
 
 > **Notice:** these software should be fix in `bin/software` file.
