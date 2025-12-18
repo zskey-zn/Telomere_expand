@@ -1,4 +1,5 @@
 seqkit=$PATH/seqkit
+seqtk=$PATH/seqtk
 GapCloser=$PATH/TGS-GapCloser.sh
 minimap=$PATH/minimap2
 vgp=$PATH/vgp-assembly/pipeline
