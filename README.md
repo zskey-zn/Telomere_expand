@@ -10,7 +10,7 @@ This software is used for expand telomere.
 ```mermaid
 flowchart TD
     A[Extract ≥4 monomer] 
-    --> B[VGP filter]
+    --> B[VGP/seqtk filter]
     --> C{Telomere-lacking chr?}
     C -->|Yes| D[Align to chr ends]
     C -->|No| X([End])
@@ -25,6 +25,7 @@ flowchart TD
 Software:
 
 - [seqkit](https://bioinf.shenwei.me/seqkit/)
+- [seqkt](https://github.com/lh3/seqtk/)
 - [TGS-GapCloser](https://github.com/BGI-Qingdao/TGS-GapCloser)
 - [minimap2](https://github.com/lh3/minimap2)
 - [vgp-assembly (telomere module)](https://github.com/zskey-zn/vgp-assembly/tree/master/pipeline/telomere)
