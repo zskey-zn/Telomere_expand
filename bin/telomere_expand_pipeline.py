@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Fixed on Mon Dec 30 11:41:11 CST 2024
-telomere expand pipeline V4
+Fix on Thu Dec 18 14:41:21 CST 2025
+telomere expand pipeline V9
 
 @author: zhengshang@frasergen.com 2398848440@qq.com
 
@@ -51,7 +51,8 @@ touch 00.gapcloser_merge.sh.finish
 f.write(content)
 f.close()
 f=open('01.candidate_filter.sh','w')
-content="""#!/bin/bash
+if data_dict['category']!="f":
+    content="""#!/bin/bash
 echo begin  at `date`
 seqkit={}
 VGP_PIPELINE={}
@@ -71,7 +72,22 @@ $seqkit grep -f tel_filter.id candidate_contig.fa > candidate_contig.filter.fa
 $seqkit faidx candidate_contig.filter.fa
 touch 01.candidate_filter.sh.finish
 echo end at `date`"""
-f.write(content)
+    f.write(content)
+else:
+    content="""#!/bin/bash
+echo begin  at `date`
+seqkit={}
+seqkt={}
+Repetitive_monomer='{}'""".format(script_dict['seqkit'],script_dict['seqkt']data_dict['telomere_monomer'])+"""
+file=candidate_contig.fa
+$seqtk telo -s 20 -m ${Repetitive_monomer} candidate_contig.fa > candidate_contig.telo.bed 2> candidate_contig.telo.count
+awk '$2<100{print $1}' candidate_contig.telo.bed | sort -u > tel_filter.id
+$seqkit grep -f tel_filter.id candidate_contig.fa > candidate_contig.filter.fa
+$seqkit faidx candidate_contig.filter.fa
+touch 01.candidate_filter.sh.finish
+echo end at `date`"""
+	f.write(content)
+
 f.close()
 
 os.chdir('../01.check_without_telomere')
@@ -137,5 +153,3 @@ f.write("""{0}/00.gapcloser_merge/00.gapcloser_merge.sh:4g:1
 {0}/01.check_without_telomere/02.check_without_telomere.sh:4g:1\t{0}/02.minimap/03.minimap.sh:80g:20
 {0}/02.minimap/03.minimap.sh:80g:20\t{0}/03.expand/04.expand.sh:4g:1
 """.format(work_dir))
-
-
