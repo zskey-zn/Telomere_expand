@@ -3,5 +3,7 @@ asm=$Your_PATH/example/ont_read.fa
 #端粒单体要是头部(5')的正向单体
 telomere_monomer=CCCTAA
 sp=test
+#a/p/f. a is animal,p is plant,f is fungi.
+category=a
 #map-hifi for hifi reads;map-ont for ont reads;asm5 for contigs
 map_para=map-ont
