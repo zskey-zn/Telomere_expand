@@ -43,6 +43,8 @@ genome=$Your_PATH/example/genome.fa  #must be .fasta or .fa ,cannot be compresse
 asm=$Your_PATH/example/ont_read.fa  #can be hifi/ont reads and other assembly;must be .fasta or .fa,cannot be compressed
 telomere_monomer=CCCTAA  #The telomere monomer should be the positive monomer of the head chromosome (5')
 sp=test  #species name
+#a/p/f. a is animal,p is plant,f is fungi.
+category=a
 #map-hifi for hifi reads;map-ont for ont reads;asm5 for contigs
 map_para=map-ont  
 ```
