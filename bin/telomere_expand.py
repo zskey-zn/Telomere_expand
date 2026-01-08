@@ -21,6 +21,7 @@ info_file=argv['info'].strip()
 genome_file=argv['genome'].strip()
 candidate_file=argv['candidate'].strip()
 map_para=argv['map_para'].strip()
+category=argv['category'].strip()
 script_path=os.path.dirname(os.path.realpath(__file__)) + "/software.txt"
 f=open(script_path,'r')
 data=f.readlines()
@@ -91,3 +92,4 @@ touch work.sh.finish
     f.write(content)
     f.close()
     os.chdir("..")
+
