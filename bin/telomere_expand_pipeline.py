@@ -3,7 +3,7 @@
 Fix on Thu Dec 18 14:41:21 CST 2025
 telomere expand pipeline V9
 
-@author: zhengshang@frasergen.com 2398848440@qq.com
+@author: zhengshang@frasergen.com zhengshang-zn@qq.com
 
 """
 import re
@@ -136,7 +136,7 @@ os.chdir('../03.expand')
 f=open('04.expand.sh','w')
 content="""#!/bin/bash
 echo begin  at `date`
-python {2}/telomere_expand.py --info {0}/02.minimap/expand.info --genome {0}/00.gapcloser_merge/gap_free.fa --candidate {0}/00.gapcloser_merge/candidate_contig.filter.fa --map_para {1}""".format(work_dir,data_dict['map_para'],os.path.dirname(os.path.realpath(__file__)))+"""
+python {2}/telomere_expand.py --info {0}/02.minimap/expand.info --genome {0}/00.gapcloser_merge/gap_free.fa --candidate {0}/00.gapcloser_merge/candidate_contig.filter.fa --map_para {1} --category {3}""".format(work_dir,data_dict['map_para'],os.path.dirname(os.path.realpath(__file__)),data_dict['category'])+"""
 ls -d */ |awk '{print "cd "$1";sh work.sh;cd .."}' > run.sh
 sh run.sh
 echo end at `date` &&
