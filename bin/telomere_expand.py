@@ -88,8 +88,9 @@ $seqkit faidx {1} {2}:1-{5} >> candicate.fa
     content+="""{} --scaff telomere_without.fa --reads candicate.fa --minmap_arg '-x {}' --min_idy 0.2 --min_match {} --thread 20  --output gapclose --ne >pipe.log 2>pipe.err
 echo end at `date`
 touch work.sh.finish
-""".format(script_path['GapCloser'],map_para,min_match)
+""".format(script_dict['GapCloser'],map_para,min_match)
     f.write(content)
     f.close()
     os.chdir("..")
+
 
