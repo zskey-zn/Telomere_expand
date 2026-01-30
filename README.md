@@ -7,18 +7,7 @@ This software is used for expand telomere.
 ## Overview
 ### Telomere Expansion Workflow
 
-```mermaid
-flowchart TD
-    A[Extract ≥4 monomer] 
-    --> B[VGP/seqtk filter]
-    --> C{Telomere-lacking chr?}
-    C -->|Yes| D[Align to chr ends]
-    C -->|No| X([End])
-    D --> E[Select best alignment]
-    E --> F[Expand chr]
-    F --> G([Complete])
-```
-
+![workflow](image/workflow.png)
 
 ## Dependencies
 
