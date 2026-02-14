@@ -1,4 +1,4 @@
-# Telomere_expand
+# TeloPick
 telomere expand pipeline
 ## Introduction
 
